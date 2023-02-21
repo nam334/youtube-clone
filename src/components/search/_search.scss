@@ -1,0 +1,19 @@
+.test{
+ 
+    position: absolute;
+  
+    color: #000;
+    /* z-index: 9; */
+    top: 55px;
+    /* display: none; */
+    background: #ccc;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.suggestion{
+    display: flex;
+}
+.text-slate-500{
+    font-size: 1rem;
+}
