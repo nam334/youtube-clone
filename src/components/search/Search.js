@@ -26,16 +26,12 @@ const Search = () => {
             {
             suggestion && suggestion.map((suggestion,i)=>
             <SearchComponent suggestion={suggestion} 
-            //suggestionHandler={suggestionHandler} 
+            setText={setText}
              />
-           
-            )} 
-           
+            ) 
+            
+            } 
            </div>
-          
-            {/* <button type='submit'>
-                <AiOutlineSearch size={22} />
-            </button> */}
         </form>
         </>
     )
