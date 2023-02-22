@@ -48,7 +48,7 @@ useEffect(() => {
       })
       setChannelIcon(items[0].snippet.thumbnails.default)
    }
-   get_channel_icon()
+   get_channel_icon() 
 }, [channelId])
 
 const handleVideoClick = () => {

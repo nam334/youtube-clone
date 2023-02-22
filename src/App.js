@@ -64,11 +64,13 @@ const App = () => {
 
   return (
     <>
-    {/* <Provider store={store}>    
+    {/* <Provider store={store}>     
     <App/>
     </Provider> */} 
     {/*  */}
     <Routes>
+      {/* <Route path="/" element={<Layout><HomeScreen/></Layout>} />
+      <Route path="/auth" element={<LoginScreen/>} /> */}
       <Route path="/" element={<Layout><HomeScreen/></Layout>} />
       <Route path="/auth" element={<LoginScreen/>} />
       <Route path='/search' element={<Layout>Search</Layout>} />

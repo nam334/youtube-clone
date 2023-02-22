@@ -12,7 +12,11 @@ const Search = () => {
         else setSuggestion([])
     }
     useEffect(()=> {
-       searchVideos(text)
+        const timer = setTimeout(()=>{
+            searchVideos(text)
+        },1000)
+       
+        return ()=> clearTimeout(timer)
     },[text])
     console.log(suggestion)
     return (

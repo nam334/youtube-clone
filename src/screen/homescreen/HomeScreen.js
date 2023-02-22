@@ -17,19 +17,25 @@ const HomeScreen = () => {
   const activeCategory = useSelector(store => store.video.activeCategory)
   const nextPageToken = useSelector(store => store.video.nextPageToken)
   const loading = useSelector(store => store.video.loading)
-
+  const accessToken = useSelector(store => store?.login?.userData[0]?.accessToken)
+  const navigate = useNavigate()
   const dispatch = useDispatch()
 
   useEffect(()=>{
     const fetchedData = getPopularVideos().then(val => {
-  
     const dataRes = val && val.data.items
     const nextPageToken = val && val.data.nextPageToken
     dispatch(getVideo({dataRes, nextPageToken}))
     })
-  
-   
   },[])
+
+  useEffect(()=>{
+    if(accessToken){
+      navigate('/')
+    }
+    else navigate('/auth')
+  },[accessToken, navigate])
+
   const getPopularVideos = async () => {
     const res = await request('/videos',{
       params:{

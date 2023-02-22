@@ -10,14 +10,15 @@ import { useNavigate } from 'react-router-dom';
 const LoginScreen = () => {
   const dispatch = useDispatch()
   const userData = useSelector(store => store.login.userData)
- 
+  const accessToken = useSelector(store => store?.login?.userData[0]?.accessToken)
   const navigate = useNavigate()
 
   useEffect(()=>{
-    if(userData[0] && userData[0].accessToken){
+    if(accessToken){
       navigate('/')
     }
-  },[navigate, userData])
+    else navigate('/auth')
+  },[accessToken, navigate])
   
   const provider = new GoogleAuthProvider();
   provider.addScope("https://www.googleapis.com/auth/youtube.force-ssl")
@@ -45,7 +46,7 @@ const LoginScreen = () => {
   });
 
 
-  
+   
   }
   return (
     <div className='login'>

@@ -21,7 +21,8 @@
       }
       &__duration {
          position: absolute;
-
+         color: #fff;
+         font-size: 13px;
          bottom: 0.3rem;
          right: 0.3rem;
          width: 45px;
@@ -33,25 +34,40 @@
 
    &__title {
       margin-bottom: 0.1rem;
-      font-family: "Roboto","Arial",sans-serif;
+      font-family: "Roboto",sans-serif;
     font-size: 0.9rem;
-    line-height: 2rem;
-    font-weight: 500;
-      color: #fff;
+    line-height: 1.5rem;
+    font-weight: bolder;
+      color: $black-primary;
       @include line-clamp(1);
+
+   //    font-family: "Roboto","Arial",sans-serif;
+   //  font-size: 1.4rem;
+   //  line-height: 2rem;
+   //  font-weight: 500;
+    overflow: hidden;
+    display: block;
+    max-height: 4rem;
+    -webkit-line-clamp: 2;
+    display: box;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    white-space: normal;
+
    }
 
    &__details {
       display: flex;
       align-items: center;
       font-size: 14px;
-      color: #757575;
+      color: #606060;
    }
    &__channel {
       display: flex;
       align-items: center;
       margin: 0.5rem 0;
-
+      color: #606060;
       img {
          width: 36px;
          height: 36px;

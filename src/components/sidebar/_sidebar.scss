@@ -1,7 +1,7 @@
 @import "../../base.scss";
 
 .sidebar{
-    background: $black-secondary;
+    background: $transparant-background;
     display: flex;
     flex-direction: column;
     width: 250px;
@@ -11,14 +11,15 @@
     position: sticky;
     top: 10vh;
     left: 0;
-
+    color: $black-primary;
     li{
         display: flex;
         align-items: center;
         padding: 0.6rem 1.5rem;
-        margin: 0.2rem 0;
+        margin: 0.2rem 0.5rem;
         cursor: pointer;
-
+        background: #efecec;
+        border-radius: 8px;
         span{
             margin-left: 1rem;
             font-size: 14px;
@@ -27,7 +28,7 @@
         }
 
         &:hover{
-            background-color: $border-color;
+            background: #e7e4e4;
         }
 
        
