@@ -1,6 +1,8 @@
 @import '../../_base.scss';
 
 .videoMetaData{
+    color: $black-primary;
+   
     &__top{
         span{
             cursor: pointer;
@@ -35,12 +37,14 @@
         font-size: 0.9rem;
         white-space: pre-line;
         border-bottom: 0.2px solid $border-color;
-
+        border-radius: 8px;
+        padding: 0.5rem;
+        background: #efecec;
         .showMoreText{
             text-decoration: none;
             display: block;
             margin: 1rem 0;
-            color: #fff;
+            color: $black-primary;
             font-weight: 500;
             cursor: pointer;
         }

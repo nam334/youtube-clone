@@ -14,7 +14,7 @@ const SearchComponent = ({suggestion, setText}) => {
         <div className='suggestion flex items-center p-2 '  
         onClick={()=> {
             navigate(`/watch/${videoId}`)
-            setText('')
+            setText('') 
         }}  
          
          >

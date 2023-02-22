@@ -24,8 +24,9 @@
     }
 
     img{
-        width: 100px;
+        width: 200px;
         height: 100px;
+        cursor: pointer;
     }
 
     form{
@@ -35,7 +36,7 @@
         margin: 0 1rem;
         border-radius: 3px;
         border: 1.2px solid;
-        background-color: $black-secondary;
+        // background-color: $black-secondary;
 
         input{
             width: 100%;
@@ -43,7 +44,7 @@
             font-weight: 500;
             background: transparent;
             padding: 0.3rem;
-            color: $text-color;
+            color: $black-primary;
 
             &:focus{
                 outline: none;

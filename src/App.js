@@ -23,11 +23,11 @@ const Layout = ({children}) => {
   return (
     <>
     <Header handleSidebar={handleSidebar} />
-    <div className='app__container border border-info'>
+    <div className='app__container  '>
         <Sidebar sidebar={sidebar} handleSidebar={handleSidebar} />
-        <Container fluid className='app_main border border-warning'>
+        <Container fluid className='app_main border '>
             {children}
-        </Container>
+        </Container> 
     </div>
     </>
   )

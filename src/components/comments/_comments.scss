@@ -1,7 +1,11 @@
+@import '../../_base.scss';
+.comments{
+   color: $black-primary;
+}
 .comments__form {
     img {
        width: 50px;
-       height: 50px;
+       height: 50px; 
        object-fit: contain;
     }
     input {

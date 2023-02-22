@@ -24,7 +24,7 @@ const LoginScreen = () => {
   provider.addScope("https://www.googleapis.com/auth/youtube.force-ssl")
   //const auth = getAuth();
   const handleLogin= () => {
-   signInWithPopup(auth, provider)
+   signInWithPopup(auth, provider) 
   .then((result) => {
     const user = result.user;
    

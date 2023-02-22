@@ -2,25 +2,26 @@
 
 .chatHeader{
   padding: 0.5rem;
+  color: $black-primary;
 }
 
 
 .chatScreen{
-  
-    background: #121417;
+   
+    background: #e7e4e4;
     display: flex;
     flex-direction: column-reverse;
     height: 70vh;
     padding-top: 2rem;
     transition: transform 0.2s ease-in;
     overflow-y: scroll;
-    border: 1px solid #4d4f52;
+    //border: 1px solid #4d4f52;
     border-radius: 5px;
 
     &__text{
-        color: $text-color;
+        color: $black-primary;
         font-size: 12px;
-        background-color: #1a1b1d;
+        background-color: #efecec;
         
         padding: 0.5rem;
     }

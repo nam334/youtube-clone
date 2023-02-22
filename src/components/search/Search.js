@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import SearchComponent from "./SearchComponent";
 import './_search.scss'
 const Search = () => {
-    const [text, setText] = useState('')
+    const [text, setText] = useState('') 
     const [suggestion, setSuggestion] = useState([])
     const videos = useSelector(store => store.video.videos)
     const searchVideos = (text) => {
