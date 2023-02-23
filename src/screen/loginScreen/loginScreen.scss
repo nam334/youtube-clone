@@ -7,28 +7,37 @@
    place-items: center;
 
    &__container {
-      background-color: $black-secondary;
+      background: #efecec;
       padding: 2rem;
       margin: 0 1rem;
-      border-radius: 10px;
+      border-radius: 10px; 
       display: flex;
       flex-direction: column;
       align-items: center;
  
-      button {
-         padding: 0.5rem;
-         border: none;
-         border-radius: 5px;
-         margin-bottom: 1rem;
-         &:focus {
-            outline: none;
-         }
+      img{
+         width: 500px;
+      }
+   }
+   &__button {
+      padding: 0.5rem;
+      background: #1A73E8;
+      color: $transparant-background;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+      &:focus {
+         outline: none;
+      }
+      &__img{
+         width: 30px;
+         height: 30px;
       }
    }
 
-   img {
-      width: 130px;
-      height: 130px;
-      object-fit: contain;
-   }
+   // img {
+   //    width: 130px;
+   //    height: 130px;
+   //    object-fit: contain;
+   // }
 }

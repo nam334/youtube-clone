@@ -6,10 +6,10 @@ const SearchComponent = ({suggestion, setText}) => {
 //     const handleVideoClick = () => {
 //         navigate(`/watch/${_videoId}`)
 //   }
-    console.log(videoId)
+    console.log(suggestion)
     const navigate = useNavigate()
     return (
-        <div className='cursor-pointer hover:bg-slate-200 rounded-lg' 
+        <div className='cursor-pointer hover:bg-slate-200 rounded-lg search__component' 
         >
         <div className='suggestion flex items-center p-2 '  
         onClick={()=> {
@@ -22,7 +22,8 @@ const SearchComponent = ({suggestion, setText}) => {
            <h1 className='text-slate-500 text-sm mx-2'
             
             >
-              {suggestion.snippet.title}
+              {suggestion.snippet.title} <br/>
+              <p className='suggestion__channelTitle'>{suggestion.snippet.channelTitle}</p>
            </h1>
         </div>
        

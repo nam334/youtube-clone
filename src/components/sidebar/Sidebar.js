@@ -64,7 +64,7 @@ const Sidebar = ({sidebar, handleSidebar}) => {
     </li>
     <li>
        <MdSentimentDissatisfied size={23} />
-       <span>I don't Know</span>
+       <span>Watch</span>
     </li>
 
    
@@ -73,7 +73,7 @@ const Sidebar = ({sidebar, handleSidebar}) => {
        <span>Log Out</span>
     </li>
 
-    <hr />
+    {/* <hr /> */}
  </nav>
   )
 }

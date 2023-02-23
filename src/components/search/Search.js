@@ -14,7 +14,7 @@ const Search = () => {
     useEffect(()=> {
         const timer = setTimeout(()=>{
             searchVideos(text)
-        },1000)
+        },1000) 
        
         return ()=> clearTimeout(timer)
     },[text])
@@ -32,8 +32,7 @@ const Search = () => {
             <SearchComponent suggestion={suggestion} 
             setText={setText}
              />
-            ) 
-            
+            )
             } 
            </div>
         </form>

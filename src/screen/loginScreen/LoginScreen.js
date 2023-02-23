@@ -6,7 +6,7 @@ import { getAuth, GoogleAuthProvider ,signInWithPopup} from "firebase/auth";
 import { loginSuccess, userProfile } from '../../redux/loginSlice';
 import {auth} from '../../firebase'
 import { useNavigate } from 'react-router-dom';
-
+import img from '../../assets/googleLogo.png'
 const LoginScreen = () => {
   const dispatch = useDispatch()
   const userData = useSelector(store => store.login.userData)
@@ -44,7 +44,7 @@ const LoginScreen = () => {
   }).catch((error) => {
   
   });
-
+ 
 
    
   }
@@ -52,12 +52,14 @@ const LoginScreen = () => {
     <div className='login'>
         <div className='login__container'>
             <img 
-            src='https://i.ytimg.com/vi/KuMrlY3kCdM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCHroQNOgFI5SpTIA6dTr0uPNJT8A'
+            //src='https://i.ytimg.com/vi/KuMrlY3kCdM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCHroQNOgFI5SpTIA6dTr0uPNJT8A'
+            src='https://download.logo.wine/logo/YouTube/YouTube-Logo.wine.png'
             alt=''
             />
         </div>
-        <button onClick={handleLogin}>Login with google</button>
-        <p>This project is made using youtube api</p>
+        <button onClick={handleLogin} className='login__button'>
+          <img src={img} alt='logo' className='login__button__img'/> Sign in with Google</button>
+        {/* <p>This project is made using youtube api</p> */}
     </div>
   )
 }

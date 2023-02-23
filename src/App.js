@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Header from './components/header/Header'
 import Sidebar from './components/sidebar/Sidebar'
-import {Container} from "react-bootstrap"
+import {Col, Container} from "react-bootstrap"
 import HomeScreen from './screen/homescreen/HomeScreen'
 import './_app.scss'
 import LoginScreen from './screen/loginScreen/LoginScreen'
@@ -20,14 +20,18 @@ const Layout = ({children}) => {
   const handleSidebar = () => {
       setSidebar(!sidebar)
   }
-  return (
+  return ( 
     <>
     <Header handleSidebar={handleSidebar} />
-    <div className='app__container  '>
-        <Sidebar sidebar={sidebar} handleSidebar={handleSidebar} />
+    <div className='app__container'>
+    <Col  lg={2} md={2} >
+    <Sidebar sidebar={sidebar} handleSidebar={handleSidebar} />
+    </Col>
+    <Col  lg={10} md={10} >
         <Container fluid className='app_main border '>
             {children}
         </Container> 
+        </Col>
     </div>
     </>
   )
